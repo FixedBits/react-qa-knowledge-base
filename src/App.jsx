@@ -14,16 +14,7 @@ export default function App() {
     <div className="app-container">
       <Header />
       <SearchBar search={search} setSearch={setSearch} />
-      <div className="content-area">
-{filtered.length > 0 ? (
-  filtered.map((q) => (
-    <QuestionCard key={q.id} question={q.question} answer={q.answer} />
-  ))
-) : (
-  <p style={{ color: "#aaa", marginTop: "20px" }}>
-    No questions match your search.
-  </p>
-)}      </div>
+      <div className="content-area">{filtered.length > 0 ? filtered.map((q) => <QuestionCard key={q.id} question={q.question} answer={q.answer} />) : <p style={{ color: "#aaa", marginTop: "20px" }}>No questions match your search.</p>} </div>
     </div>
   );
 }
