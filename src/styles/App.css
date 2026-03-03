@@ -27,6 +27,19 @@
   }
 }
 
+.question-card {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #595757;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.question-card:hover {
+  background: #f9f9f9;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
