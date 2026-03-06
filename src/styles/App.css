@@ -29,20 +29,22 @@
 
 .question-card {
   padding: 1.25rem;
+  margin-bottom: 1.25rem;
   border-radius: 8px;
   background: #1e1e1e;
   border: 1px solid #2a2a2a;
   cursor: pointer;
   transition:
     background 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .question-card:hover {
   background: #252525;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+  border-color: #3a3a3a;
 }
 
 .question-card h3 {
