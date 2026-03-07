@@ -9,12 +9,11 @@ export default function App() {
   const [search, setSearch] = useState("");
 
   const filtered = questions.filter((q) => q.question.toLowerCase().includes(search.toLowerCase()));
-
   return (
     <div className="app-container">
       <Header />
       <SearchBar search={search} setSearch={setSearch} />
-      <div className="content-area">{filtered.length > 0 ? filtered.map((q) => <QuestionCard key={q.id} question={q.question} answer={q.answer} />) : <p style={{ color: "#aaa", marginTop: "20px" }}>No questions match your search.</p>} </div>
+      <div className="content-area">{filtered.length > 0 ? filtered.map((q, index) => <QuestionCard key={q.id} question={q.question} answer={q.answer} style={{ animationDelay: `${index * 0.07}s` }} />) : <p style={{ color: "#aaa", marginTop: "20px" }}>No questions match your search.</p>}</div>
     </div>
   );
 }
